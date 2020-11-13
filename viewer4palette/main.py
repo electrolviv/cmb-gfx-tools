@@ -17,8 +17,8 @@ class WidgetPall4Cell(QWidget):
     def __init__(self, r : int):
         super().__init__()
 
-        self.w = int(128/16)
-        self.h = int(128/16)
+        self.w = int(192/16)
+        self.h = int(192/16)
 
         self.setFixedSize( self.w * 16, self.h * 16)
         self.r = r
@@ -40,7 +40,7 @@ class WidgetPall4Cell(QWidget):
                 flagw = False
 
                 clr = QColor(r, g, b)
-                x, y = i*self.w, j*self.w
+                x, y = i*self.w, j*self.h
                 w, h = self.w - 1, self.h - 1
                 qp.fillRect(x, y, w, h, clr)
                 if flagw:
@@ -82,7 +82,7 @@ if __name__ == "__main__":
 
     app = QApplication([])
     wdg = WidgetPalette4Viewer()
-    wdg.setMinimumSize(700, 700)
+    wdg.setMinimumSize(900, 900)
     wdg.show()
     sys.exit(app.exec())
 
