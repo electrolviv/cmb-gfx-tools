@@ -1,0 +1,6 @@
+content:
+    - flashblock.py
+
+output: example.bin
+
+align: 256
